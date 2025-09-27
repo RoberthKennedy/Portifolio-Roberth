@@ -266,8 +266,7 @@ footer .copy {
         justify-content: center;
     }
 
-    /* O grid de projetos se adapta automaticamente (graças ao auto-fit),
-       mas ajustamos o padding do container para não grudar nas bordas. */
+    
     .container {
         padding: 20px;
     }
