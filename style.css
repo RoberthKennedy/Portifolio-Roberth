@@ -1,31 +1,28 @@
-/* ===================================================================
-   CONFIGURAÇÕES GLOBAIS E REGRAS BÁSICAS
-   Define cores, fontes e reseta margens para consistência.
-   =================================================================== */
+
 :root {
-    /* Definição de variáveis CSS para fácil manutenção e intuitividade */
-    --cor-principal: #3498db; /* Azul Principal: Usado para botões, links e destaques */
-    --cor-secundaria: #2c3e50; /* Azul Escuro: Usado para fundos de cabeçalho/rodapé e títulos */
+   
+    --cor-principal: #3498db; 
+    --cor-secundaria: #2c3e50; 
     --cor-texto: #333;
-    --cor-fundo-claro: #f4f4f4; /* Cinza Suave: Usado para alternar o fundo das seções (seções ímpares) */
+    --cor-fundo-claro: #f4f4f4; 
     --cor-branco: #ffffff;
 }
 
-/* Reset básico para remover margens e paddings padrões do navegador */
+
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Garante que padding e borda não aumentem o tamanho total do elemento */
+    box-sizing: border-box; 
 }
 
 body {
-    font-family: 'Roboto', sans-serif; /* Fonte limpa e legível */
-    line-height: 1.6; /* Aumenta o espaçamento entre linhas para melhor leitura */
+    font-family: 'Roboto', sans-serif; 
+    line-height: 1.6; 
     color: var(--cor-texto);
     background-color: var(--cor-branco);
 }
 
-/* Centraliza o conteúdo e limita a largura máxima para leitura confortável em telas grandes */
+
 .container {
     width: 90%;
     max-width: 1200px;
@@ -33,7 +30,7 @@ body {
     padding: 40px 0;
 }
 
-/* Tipografia e Títulos */
+
 h1 {
     font-size: 3em;
     color: var(--cor-secundaria);
@@ -45,7 +42,7 @@ h2 {
     font-size: 2.5em;
     color: var(--cor-principal);
     margin-bottom: 40px;
-    /* Sublinhado visual para destacar o título de cada seção */
+    
     border-bottom: 3px solid var(--cor-principal); 
     display: inline-block;
     padding-bottom: 5px;
@@ -56,18 +53,16 @@ h3 {
     margin-top: 20px;
 }
 
-/* ===================================================================
-   1. ESTILIZAÇÃO DO CABEÇALHO (INTRODUÇÃO E MENU)
-   =================================================================== */
+
 header {
     background: var(--cor-secundaria);
     color: var(--cor-branco);
-    padding: 80px 0; /* Grande padding para destaque visual na introdução */
+    padding: 80px 0; 
     text-align: center;
 }
 
 header h1 {
-    color: var(--cor-principal); /* Destacando o nome com a cor principal */
+    color: var(--cor-principal); 
 }
 
 header .subtitulo {
@@ -75,7 +70,7 @@ header .subtitulo {
     margin-bottom: 25px;
 }
 
-/* Estilo do menu de navegação */
+
 header nav a {
     color: var(--cor-branco);
     text-decoration: none;
@@ -85,39 +80,37 @@ header nav a {
 }
 
 header nav a:hover {
-    color: var(--cor-principal); /* Feedback visual ao passar o mouse */
+    color: var(--cor-principal); 
 }
 
-/* ===================================================================
-   2. ESTILIZAÇÃO DAS SEÇÕES E BLOCOS DE CONTEÚDO
-   =================================================================== */
+
 section {
     padding: 80px 0;
 }
 
-/* Classe para alternar o fundo das seções e criar um ritmo visual */
+
 .bg-claro {
     background-color: var(--cor-fundo-claro); 
 }
 
-/* SOBRE MIM / EDUCAÇÃO */
+
 #sobre h2 {
     display: block; 
 }
 
-/* Destaque visual para itens de lista (Educação) */
+
 .item-lista {
     margin-bottom: 15px;
     padding-left: 15px;
-    border-left: 3px solid var(--cor-principal); /* Linha vertical */
+    border-left: 3px solid var(--cor-principal); 
 }
 
-/* Estilo para as "tags" de Habilidades */
+
 .habilidades {
     list-style: none;
     display: flex;
     flex-wrap: wrap; 
-    gap: 10px; /* Espaçamento entre as tags */
+    gap: 10px; 
     margin-top: 20px;
 }
 
@@ -130,19 +123,19 @@ section {
     font-weight: 700;
 }
 
-/* EXPERIÊNCIA */
+
 .experiencia-item {
     margin-bottom: 30px;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 8px;
     background: var(--cor-branco);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Sombra suave para destacar o bloco */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .experiencia-item .empresa {
     font-style: italic;
-    color: var(--cor-principal); /* Cor de destaque para o nome da empresa */
+    color: var(--cor-principal); 
     margin-bottom: 10px;
 }
 
@@ -150,12 +143,11 @@ section {
     margin-left: 20px;
 }
 
-/* 4. PROJETOS DESTACADOS - USO INTUITIVO DE GRID */
+
 .grid-projetos {
-    /* Uso do CSS Grid para layout flexível e responsivo */
+    
     display: grid;
-    /* auto-fit: O grid se adapta automaticamente ao tamanho da tela */
-    /* minmax(300px, 1fr): Garante que cada cartão tenha no mínimo 300px e ocupe o espaço restante igualmente */
+   
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
     gap: 30px;
 }
@@ -169,7 +161,7 @@ section {
 }
 
 .projeto-card:hover {
-    transform: translateY(-5px); /* Efeito de elevação para feedback ao usuário */
+    transform: translateY(-5px); 
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
@@ -192,11 +184,11 @@ section {
 }
 
 .botao-projeto:hover {
-    background: var(--cor-secundaria); /* Feedback visual de ação */
+    background: var(--cor-secundaria); 
 }
 
 
-/* 5. RODAPÉ / CONTATO */
+
 footer {
     background: var(--cor-secundaria);
     color: var(--cor-fundo-claro);
@@ -214,7 +206,7 @@ footer address p {
 }
 
 footer a {
-    color: var(--cor-principal); /* Link em destaque no rodapé */
+    color: var(--cor-principal); 
     text-decoration: none;
     font-weight: 700;
 }
@@ -230,13 +222,10 @@ footer .copy {
 }
 
 
-/* ===================================================================
-   RESPONSIVIDADE INTUITIVA (MOBILE-FIRST)
-   Garante que o design se adapte a telas menores (celulares e tablets)
-   =================================================================== */
+
 @media (max-width: 768px) {
     
-    /* Reduz o tamanho da fonte para melhor visualização em telas pequenas */
+    
     h1 {
         font-size: 2.2em;
     }
@@ -249,19 +238,19 @@ footer .copy {
         padding: 50px 0;
     }
 
-    /* Menu de Navegação se transforma em links empilhados verticalmente */
+    
     header nav a {
         display: block; 
         margin: 10px auto;
         font-size: 1em;
     }
     
-    /* Reduz o padding das seções para otimizar o espaço vertical */
+    
     section {
         padding: 40px 0;
     }
 
-    /* Centraliza as tags de habilidades para um visual mais limpo no celular */
+    
     .habilidades {
         justify-content: center;
     }
